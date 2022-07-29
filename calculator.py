@@ -19,24 +19,25 @@ num1 = float(input('Podaj składnik 1. '))
 num2 = float(input('Podaj składnik 2. '))
 
 if choice == '1':
-    logging.debug('Dodaję {} i {}'.format(num1, num2))
+    logging.debug(f'Dodaję {num1:.2f} i {num2:.2f}')
     add_result = add(num1, num2)
     print(f'Wynik to {add_result:.2f}')
 
 elif choice == '2':
-    logging.debug('Odejmuję {} i {}'.format(num1, num2))
+    logging.debug(f'Odejmuję {num1:.2f} i {num2:.2f}')
     subtraction_result = subtraction(num1, num2)
     print(f'Wynik to {subtraction_result:.2f}')
 
 elif choice == '3':
-    logging.debug('Mnożę {} i {}'.format(num1, num2))
+    logging.debug(f'Mnożę {num1:.2f} i {num2:.2f}')
     multiplication_result = multiplication(num1, num2)
     print(f'Wynik to {multiplication_result:.2f}')
 
 elif choice == '4':
-    logging.debug('Dzielę {} i {}'.format(num1, num2))
+    logging.debug(f'Dzielę {num1:.2f} i {num2:.2f}')
     division_result = division(num1, num2)
     print(f'Wynik to {division_result:.2f}')
 
-else:
-    logging.error('Niewłaściwa wartość')
+elif choice >= '5':
+    print('Nie wybrałeś poprawnie działania')
+    
